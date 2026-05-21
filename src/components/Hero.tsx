@@ -67,7 +67,7 @@ export default function Hero({ subtitle, title, text }: HeroProps) {
 
                 {!donated ? (
                     <>
-                        <p className="text-white tracking-[2px] text-[24px] md:text-[32px] font-medium mb-8 font-serif drop-shadow-[0_4px_12px_rgba(0,0,0,1)] max-w-[800px] mx-auto">
+                        <p className="text-white tracking-[2px] text-[24px] md:text-[32px] font-medium mb-8 font-serif italic drop-shadow-[0_4px_12px_rgba(0,0,0,1)] max-w-[800px] mx-auto">
                             {subtitle}
                         </p>
                         <div className="max-w-[320px] mx-auto">
