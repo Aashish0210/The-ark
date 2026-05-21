@@ -126,7 +126,7 @@ export default function CardGallery() {
   return (
     <section
       id="ancient-legends"
-      className="py-16 relative border-t border-white/5 bg-navy"
+      className="py-24 relative border-t border-white/5 bg-navy"
     >
       {/* Water texture overlay */}
       <div
@@ -162,10 +162,10 @@ export default function CardGallery() {
           {cultures.map((culture) => (
             <div
               key={culture.id}
-              className="group cursor-pointer flex flex-col flex-shrink-0 overflow-hidden hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.5)] transition-all duration-300 w-[85vw] sm:w-[320px] md:w-auto md:max-w-none snap-start"
+              className="group cursor-pointer flex flex-col flex-shrink-0 overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)] hover:border-gold/30 transition-all duration-500 w-full sm:w-[320px] md:w-auto md:max-w-none snap-center bg-navy"
               style={{
-                border: "2px solid rgba(255,255,255,0.15)",
-                borderRadius: "4px",
+                border: "1px solid rgba(255,255,255,0.05)",
+                borderRadius: "8px",
               }}
             >
               {/* Image */}

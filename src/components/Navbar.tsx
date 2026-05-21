@@ -55,10 +55,10 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="#about"
+                href="#our-mission"
                 className="text-white hover:text-gold no-underline text-sm tracking-wider uppercase transition-colors heading-font"
               >
-                About
+                The Mission
               </Link>
             </li>
             <li>
@@ -116,11 +116,11 @@ export default function Navbar() {
           The Story
         </Link>
         <Link
-          href="#about"
+          href="#our-mission"
           onClick={() => setMenuOpen(false)}
           className="font-cinzel text-sm font-semibold tracking-widest text-cream/75 no-underline py-4 border-b border-gold/10 transition-all hover:text-gold hover:pl-2"
         >
-          About
+          The Mission
         </Link>
         <Link
           href="#story"

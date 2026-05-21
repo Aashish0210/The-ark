@@ -21,7 +21,7 @@ export default async function Home() {
 
   const settings = rawSettings || {
     raised: 0,
-    goal: 100000000,
+    goal: 9000000,
     heroTitle: "ASHA JAHAJ ARK OF HOPE",
     heroSubtitle: "A STORY OF FAITH IN KENTUCKY",
     heroText:

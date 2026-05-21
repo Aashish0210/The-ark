@@ -2,9 +2,14 @@ export function TheStoryPart1() {
   return (
     <section
       id="the-story"
-      className="pt-20 pb-10 bg-navy relative border-t border-white/5"
+      className="pt-28 pb-20 bg-navy relative border-t border-white/5"
     >
       <div className="max-w-[1200px] mx-auto px-6">
+        <header className="text-center mb-4">
+          <h2 className="text-[2.5rem] leading-[1.2] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-cinzel">
+            The Story
+          </h2>
+        </header>
         <article className="prose prose-invert max-w-none text-text-muted text-[18px] md:text-[20px] leading-[1.8] tracking-wide font-sans text-center [&>p]:mb-4 [&>div]:mt-8 mx-auto max-w-[800px]">
           <p>
             Across the world, from ancient Asia to South America, from Rome to
@@ -23,14 +28,11 @@ export function TheStoryPart1() {
 
 export function TheStoryPart2() {
   return (
-    <section className="py-10 bg-navy relative border-t border-white/5">
+    <section id="our-mission" className="py-24 bg-navy relative border-t border-white/5">
       <div className="max-w-[1200px] mx-auto px-6">
         <header className="text-center mb-4">
           <h2 className="text-[2.5rem] leading-[1.2] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-cinzel">
-            Our Mission{" "}
-            <span className="text-gold block mt-2 text-xl">
-              Ark Project
-            </span>
+            The Mission
           </h2>
         </header>
         <article className="prose prose-invert max-w-none text-text-muted text-[18px] md:text-[20px] leading-[1.8] tracking-wide font-sans text-center [&>p]:mb-4 [&>div]:mt-8 mx-auto max-w-[800px]">
@@ -63,7 +65,7 @@ export function TheStoryPart2() {
 
 export function TheStoryPart3() {
   return (
-    <section className="py-10 bg-navy relative border-t border-white/5">
+    <section className="py-24 bg-navy relative border-t border-white/5">
       <div className="max-w-[1200px] mx-auto px-6">
         <article className="prose prose-invert max-w-none text-text-muted text-[18px] md:text-[20px] leading-[1.8] tracking-wide font-sans text-center [&>p]:mb-4 [&>div]:mt-8 mx-auto max-w-[800px]">
           <p className="text-gold font-semibold text-2xl text-center font-cinzel tracking-wider leading-snug">
@@ -113,7 +115,7 @@ export function TheStoryPart3() {
 
 export function TheStoryPart4() {
   return (
-    <section className="py-10 bg-navy relative border-t border-white/5">
+    <section className="py-24 bg-navy relative border-t border-white/5">
       <div className="max-w-[1200px] mx-auto px-6">
         <article className="prose prose-invert max-w-none text-text-muted text-[18px] md:text-[20px] leading-[1.8] tracking-wide font-sans text-center [&>p]:mb-4 [&>div]:mt-8 mx-auto max-w-[800px]">
           <div className="text-center mt-8 p-6 md:p-10 border border-gold/30 rounded-2xl bg-black/30 shadow-[0_0_40px_rgba(212,175,55,0.08)]">

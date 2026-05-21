@@ -165,10 +165,9 @@ export default function ProgressTracker({ raised, goal }: ProgressProps) {
 
                 <div className="flex justify-between text-text-muted text-[10px] md:text-xs font-semibold mt-4 px-1">
                     <span>$0</span>
-                    <span>$25M</span>
-                    <span>$50M</span>
-                    <span>$75M</span>
-                    <span>$100M</span>
+                    <span>$3M</span>
+                    <span>$6M</span>
+                    <span>$9M</span>
                 </div>
 
                 {/* Animated Ark Layers */}

@@ -52,7 +52,7 @@ export default function Hero({ subtitle, title, text }: HeroProps) {
                     <div
                         className="absolute inset-0"
                         style={{
-                            background: `linear-gradient(to bottom, rgba(5, 12, 22, 0.85) 0%, rgba(5, 12, 22, 0.4) 40%, rgba(5, 12, 22, 0.4) 60%, #071220 100%), url("${img}") center/cover no-repeat`,
+                            background: `linear-gradient(to bottom, rgba(5, 12, 22, 0.95) 0%, rgba(5, 12, 22, 0.7) 40%, rgba(5, 12, 22, 0.7) 60%, #071220 100%), url("${img}") center/cover no-repeat`,
                             backgroundAttachment: 'fixed'
                         }}
                     ></div>
@@ -63,8 +63,8 @@ export default function Hero({ subtitle, title, text }: HeroProps) {
                 <span className="block text-gold tracking-[3px] text-[16px] md:text-[18px] font-semibold uppercase mb-4 heading-font drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
                     {subtitle}
                 </span>
-                <h1 className="text-[3.5rem] md:text-[5rem] leading-[1.1] md:leading-[1.15] font-bold mb-4">
-                    {mainTitle}<br /><span className="text-[4rem] md:text-[6rem] text-gold leading-[1.1] md:leading-[1.15] inline-block mt-2">{spanTitle}</span>
+                <h1 className="text-[3.5rem] md:text-[5.5rem] leading-[1.1] md:leading-[1.15] font-bold mb-4">
+                    {mainTitle}<br /><span className="text-[4rem] md:text-[6.5rem] text-gold leading-[1.1] md:leading-[1.15] inline-block mt-2">{spanTitle}</span>
                 </h1>
 
                 {!donated ? (
@@ -72,10 +72,10 @@ export default function Hero({ subtitle, title, text }: HeroProps) {
                         <p className="text-[16px] text-white/95 mb-4 max-w-[600px] mx-auto italic drop-shadow-[0_4px_12px_rgba(0,0,0,1)] font-medium">
                             {text}
                         </p>
-                        <div className="max-w-[280px] mx-auto">
+                        <div className="max-w-[320px] mx-auto">
                             <button
                                 onClick={() => openDonation()}
-                                className="w-full bg-gold text-navy font-bold py-4 rounded-xl tracking-[2px] hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.3)] active:scale-95 heading-font px-8"
+                                className="w-full bg-gold text-navy font-bold py-5 rounded-xl tracking-[2px] hover:bg-white hover:-translate-y-1 transition-all duration-400 shadow-[0_10px_30px_rgba(212,175,55,0.3)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.5)] active:scale-95 heading-font px-8 text-lg"
                             >
                                 GIVE NOW
                             </button>
