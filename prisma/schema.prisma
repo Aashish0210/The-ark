@@ -1,0 +1,67 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model SiteSettings {
+  id           Int      @id @default(autoincrement())
+  raised       Float    @default(0)
+  goal         Float    @default(100000000)
+  heroTitle    String   @default("BUILD THE ARK")
+  heroSubtitle String   @default("A STORY OF FAITH IN KENTUCKY")
+  heroText     String   @default("Every great journey begins with a single plank. Once gifted for the Ark, see the work, and please be ready—one donation at a time.")
+  updatedAt    DateTime @updatedAt
+}
+
+model DonationTier {
+  id          Int      @id @default(autoincrement())
+  icon        String
+  name        String
+  price       Float
+  available   Int
+  description String
+  features    String
+  image       String?
+  isPopular   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Stat {
+  id        Int      @id @default(autoincrement())
+  value     String
+  label     String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model TrendPoint {
+  id        Int      @id @default(autoincrement())
+  type      String
+  label     String
+  value1    Float
+  value2    Float?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Donation {
+  id        Int      @id @default(autoincrement())
+  amount    Float
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  email    String  @unique
+  password String
+  image    String?
+}

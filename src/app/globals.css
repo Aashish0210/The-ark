@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #08111b;
+  --color-navy-light: #121c27;
+  --color-navy-border: #1f2b3b;
+  --color-gold: #dfb25d;
+  --color-gold-dark: #8c6e3b;
+  --color-text-main: #fcfcfc;
+  --color-text-muted: #8d98a6;
+  --color-bg-base: #0d141e;
+
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-base text-text-main font-body;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  .heading-font {
+    @apply font-heading uppercase;
+  }
+
+  /* Hide number input arrows globally */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3 font-heading font-semibold text-[0.95rem] tracking-wide uppercase no-underline rounded cursor-pointer transition-all duration-300 border-none;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #f5d185, #cba24d);
+    color: var(--color-navy);
+    box-shadow: 0 4px 15px rgba(203, 162, 77, 0.4);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(203, 162, 77, 0.6);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold-dark);
+  }
+
+  .btn-outline:hover {
+    background: rgba(223, 178, 93, 0.1);
+    border-color: var(--color-gold);
+  }
+}
+
+@keyframes oceanShine {
+
+  0%,
+  100% {
+    transform: scaleX(.8) translateX(-5%);
+    opacity: .4;
+  }
+
+  50% {
+    transform: scaleX(1.1) translateX(5%);
+    opacity: 1;
+  }
+}
+
+.ocean-bg {
+  background: linear-gradient(180deg, #163a5c 0%, #0a1e30 50%, #060e18 100%);
+  border-radius: 55% 55% 0 0/18% 18% 0 0;
+}
+
+.ocean-shine-anim {
+  background: linear-gradient(90deg, transparent, rgba(240, 192, 96, .5) 50%, transparent);
+  animation: oceanShine 4s ease-in-out infinite;
+}
+
+@keyframes pl {
+
+  0%,
+  100% {
+    opacity: .3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomSlow {
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.08) translate(1%, 1%);
+  }
+}
+
+.animate-zoom-slow {
+  animation: zoomSlow 20s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0.6;
+  }
+
+  75% {
+    opacity: 0.3;
+  }
+}
+
+.atmospheric-particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+  opacity: 0;
+  animation: float linear infinite;
+}
+
+.bg-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+  animation: shimmer 8s infinite linear;
+}
+
+.bg-animated-depth {
+  background: linear-gradient(180deg, #0d141e 0%, #08111b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-animated-depth::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at center, rgba(223, 178, 93, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  filter: blur(80px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
