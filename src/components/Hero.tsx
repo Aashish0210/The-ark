@@ -60,17 +60,15 @@ export default function Hero({ subtitle, title, text }: HeroProps) {
             ))}
 
             <div className="relative z-10 max-w-[800px] px-6">
-                <span className="block text-gold tracking-[3px] text-[16px] md:text-[18px] font-semibold uppercase mb-4 heading-font drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">
-                    {subtitle}
-                </span>
+
                 <h1 className="text-[3.5rem] md:text-[5.5rem] leading-[1.1] md:leading-[1.15] font-bold mb-4">
                     {mainTitle}<br /><span className="text-[4rem] md:text-[6.5rem] text-gold leading-[1.1] md:leading-[1.15] inline-block mt-2">{spanTitle}</span>
                 </h1>
 
                 {!donated ? (
                     <>
-                        <p className="text-[16px] text-white/95 mb-4 max-w-[600px] mx-auto italic drop-shadow-[0_4px_12px_rgba(0,0,0,1)] font-medium">
-                            {text}
+                        <p className="text-white tracking-[2px] text-[24px] md:text-[32px] font-medium mb-8 font-serif drop-shadow-[0_4px_12px_rgba(0,0,0,1)] max-w-[800px] mx-auto">
+                            {subtitle}
                         </p>
                         <div className="max-w-[320px] mx-auto">
                             <button

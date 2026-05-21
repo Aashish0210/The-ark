@@ -50,7 +50,7 @@ export default function Navbar() {
                 href="#the-story"
                 className="text-white hover:text-gold no-underline text-sm tracking-wider uppercase transition-colors heading-font"
               >
-                The Story
+                Story
               </Link>
             </li>
             <li>
@@ -58,7 +58,7 @@ export default function Navbar() {
                 href="#our-mission"
                 className="text-white hover:text-gold no-underline text-sm tracking-wider uppercase transition-colors heading-font"
               >
-                The Mission
+                Mission
               </Link>
             </li>
             <li>
@@ -113,14 +113,14 @@ export default function Navbar() {
           onClick={() => setMenuOpen(false)}
           className="font-cinzel text-sm font-semibold tracking-widest text-cream/75 no-underline py-4 border-b border-gold/10 transition-all hover:text-gold hover:pl-2"
         >
-          The Story
+          Story
         </Link>
         <Link
           href="#our-mission"
           onClick={() => setMenuOpen(false)}
           className="font-cinzel text-sm font-semibold tracking-widest text-cream/75 no-underline py-4 border-b border-gold/10 transition-all hover:text-gold hover:pl-2"
         >
-          The Mission
+          Mission
         </Link>
         <Link
           href="#story"
