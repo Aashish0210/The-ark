@@ -14,10 +14,18 @@ import { prisma } from "@/lib/prisma";
 export const revalidate = 0; // Disable static rendering to always show fresh data
 
 export default async function Home() {
-  const [rawSettings, stats] = await Promise.all([
-    prisma.siteSettings.findFirst(),
-    prisma.stat.findMany({ orderBy: { order: "asc" } }),
-  ]);
+  let rawSettings = null;
+  let stats = [];
+  try {
+    const results = await Promise.all([
+      prisma.siteSettings.findFirst(),
+      prisma.stat.findMany({ orderBy: { order: "asc" } }),
+    ]);
+    rawSettings = results[0];
+    stats = results[1];
+  } catch (error) {
+    console.error("Failed to fetch from database:", error);
+  }
 
   const settings = rawSettings || {
     raised: 0,
